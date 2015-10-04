@@ -17,4 +17,6 @@
 @property (nonatomic, assign) double height;
 
 @property (nonatomic, copy) NSString *name;
+
+@property (nonatomic, copy) NSString *sex;
 @end
