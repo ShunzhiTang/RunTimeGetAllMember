@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Student : NSObject
+//要实现归档 就必须去遵守协议 nsCoding
+@interface Student : NSObject <NSCoding>
 
 //属性
 @property (nonatomic, assign) int age;
