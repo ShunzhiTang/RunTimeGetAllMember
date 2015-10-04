@@ -10,6 +10,17 @@
 #import <objc/runtime.h>
 
 @implementation Student
+
+/**
+ 假设我们有100个属性，但是只需要归档80个 ，利用上面的代码怎么做？
+ ﻿使用一个忽略的数组 ，然后再在归档操作中进行判断，如果是忽略的属性就跳过归档
+ */
+
+- (NSArray *)ignoredNames{
+    return @[@"_sss"];
+}
+
+
 /**
  *从文档中读取对象时会调用这个方法（开发者需要在这个方法中说明那些属性需要取出来）
  */
@@ -28,6 +39,9 @@
             Ivar ivar = ivars[i];
             //这里获取的属性他的类型不相同 ，所以有转换为oc的字符串对象
             NSString *key = [NSString stringWithUTF8String:ivar_getName(ivar)]; //属性的名称
+            
+            if( [[self ignoredNames] containsObject:key]) continue;
+            
             
             //获得key对应的值
             id value = [decoder decodeObjectForKey:key];
@@ -56,7 +70,8 @@
         //这里获取的属性他的类型不相同 ，所以有转换为oc的字符串对象
         NSString *key = [NSString stringWithUTF8String:ivar_getName(ivar)]; //属性的名称
         
-        NSLog(@"%@",key); //name  age 。。。
+//        NSLog(@"%@",key); //name  age 。。。
+         if( [[self ignoredNames] containsObject:key]) continue;
         
         //通过key获得对应成员变量的值
         id  value = [self valueForKeyPath:key]; //我们设置的值

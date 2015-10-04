@@ -26,20 +26,21 @@
 
 //点击屏幕的时间进行归档存储操作
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-//    Student *stu = [[Student alloc]init];
-//    
-//    stu.name = @"zs";
-//    stu.age = 19;
-//    stu.height = 1.88;
-//    stu.sex = @"girl";
-//    //Archiver 把。。。存档 ，就是归档
-//    [NSKeyedArchiver archiveRootObject:stu toFile:@"/Users/mac/Desktop/student.data"];
+    Student *stu = [[Student alloc]init];
+    
+    stu.name = @"zs";
+    stu.age = 19;
+    stu.height = 1.88;
+    stu.sex = @"girl";
+    stu.sss = @"-----";
+    //Archiver 把。。。存档 ，就是归档
+    [NSKeyedArchiver archiveRootObject:stu toFile:@"/Users/mac/Desktop/student.data"];
     
 //    解档
     Student *student = [NSKeyedUnarchiver unarchiveObjectWithFile:@"/Users/mac/Desktop/student.data"];
     
-    NSLog(@"%@  %@",student.name , student.sex);
-//}
+    NSLog(@"%@  %@   %@",student.name , student.sex , student.sss);
+
 }
 
 
