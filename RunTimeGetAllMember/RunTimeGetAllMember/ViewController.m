@@ -20,8 +20,6 @@
     //获取student类的成员属性的信息
     [self getMember];
     
-    
-    
 }
 
 //点击屏幕的时间进行归档存储操作
@@ -52,7 +50,6 @@
     Ivar *ivars = class_copyIvarList([Student class], &count);
     //这句话就是把count已经存储好了 ，count就是Student类中的成员属性的数量
     
-    NSLog(@"%zd",count);
     //遍历所有的成员变量
     for (int i = 0; i < count; ++i) {
         //取出i位置对应的成员变量
@@ -63,7 +60,6 @@
         
         const char *type = ivar_getTypeEncoding(ivar);
         
-        NSLog(@"%s  %s" , name , type);
     }
     
     free(ivars);
