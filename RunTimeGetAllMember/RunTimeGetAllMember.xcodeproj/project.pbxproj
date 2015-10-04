@@ -16,6 +16,7 @@
 		04C3D3BC1BC097D3004D229C /* RunTimeGetAllMemberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3D3BB1BC097D3004D229C /* RunTimeGetAllMemberTests.m */; };
 		04C3D3C71BC0982C004D229C /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3D3C61BC0982C004D229C /* Student.m */; };
 		04C3D3C91BC0A147004D229C /* student.data in Resources */ = {isa = PBXBuildFile; fileRef = 04C3D3C81BC0A147004D229C /* student.data */; };
+		04C3D3CC1BC0F907004D229C /* NSObject+SZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3D3CB1BC0F907004D229C /* NSObject+SZExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,9 @@
 		04C3D3C51BC0982C004D229C /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		04C3D3C61BC0982C004D229C /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		04C3D3C81BC0A147004D229C /* student.data */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = student.data; sourceTree = "<group>"; };
+		04C3D3CA1BC0F907004D229C /* NSObject+SZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SZExtension.h"; sourceTree = "<group>"; };
+		04C3D3CB1BC0F907004D229C /* NSObject+SZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SZExtension.m"; sourceTree = "<group>"; };
+		04C3D3CD1BC0FF09004D229C /* encode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = encode.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 		04C3D39E1BC097D3004D229C /* RunTimeGetAllMember */ = {
 			isa = PBXGroup;
 			children = (
+				04C3D3CD1BC0FF09004D229C /* encode.h */,
 				04C3D3C81BC0A147004D229C /* student.data */,
 				04C3D3C51BC0982C004D229C /* Student.h */,
 				04C3D3C61BC0982C004D229C /* Student.m */,
@@ -93,6 +98,8 @@
 				04C3D3A41BC097D3004D229C /* AppDelegate.m */,
 				04C3D3A61BC097D3004D229C /* ViewController.h */,
 				04C3D3A71BC097D3004D229C /* ViewController.m */,
+				04C3D3CA1BC0F907004D229C /* NSObject+SZExtension.h */,
+				04C3D3CB1BC0F907004D229C /* NSObject+SZExtension.m */,
 				04C3D3A91BC097D3004D229C /* Main.storyboard */,
 				04C3D3AC1BC097D3004D229C /* Images.xcassets */,
 				04C3D3AE1BC097D3004D229C /* LaunchScreen.xib */,
@@ -231,6 +238,7 @@
 				04C3D3A81BC097D3004D229C /* ViewController.m in Sources */,
 				04C3D3A51BC097D3004D229C /* AppDelegate.m in Sources */,
 				04C3D3A21BC097D3004D229C /* main.m in Sources */,
+				04C3D3CC1BC0F907004D229C /* NSObject+SZExtension.m in Sources */,
 				04C3D3C71BC0982C004D229C /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +361,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = $SRCROOT/RunTimeGetAllMember/encode.h;
 				INFOPLIST_FILE = RunTimeGetAllMember/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -363,6 +373,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = $SRCROOT/RunTimeGetAllMember/encode.h;
 				INFOPLIST_FILE = RunTimeGetAllMember/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
