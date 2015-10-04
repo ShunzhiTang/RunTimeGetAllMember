@@ -34,7 +34,7 @@
             //设置到成员变量上 ， 每一个都要赋值
             [self setValue:value forKeyPath:key]; //相当于 self.age = [decoder decodeIntForKey:@"age"];
     }
-    
+     free(ivars);
     }
     return self;
 }
@@ -64,7 +64,7 @@
         //进行归档 ，在根据我们设置的  值 ： 属性  进行存储  一样。。
         [encoder encodeObject:value forKey:key];
     }
-    
+     free(ivars);
 }
 
 /**

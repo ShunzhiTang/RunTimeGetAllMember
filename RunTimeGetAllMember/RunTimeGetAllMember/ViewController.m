@@ -64,6 +64,7 @@
         
         NSLog(@"%s  %s" , name , type);
     }
-
+    
+    free(ivars);
 }
 @end
